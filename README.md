@@ -1,7 +1,4 @@
 # Learning-Labs
-Early stage learning projects created while developing core programming skills, before working on larger, production level applications.
-
-Learning-Labs
 
 Learning-Labs is a personal repository created to document and showcase my learning journey through small, focused programs and experiments.
 Each project in this repository represents a concept I practiced while learning fundamentals, logic building, and problem-solving.
