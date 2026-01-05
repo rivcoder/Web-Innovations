@@ -7,15 +7,8 @@ Learning-Labs is a personal repository created to document and showcase my learn
 Each project in this repository represents a concept I practiced while learning fundamentals, logic building, and problem-solving.
 
 Disclaimer ⚠️- This repository is meant for learning purposes only.
-
 ---
-
-What This Repository Contains - 📍
-
-Small programs 
-Concept-focused experiments.
-Well-documented code with explanations in README files
-Incremental improvements as learning progresses
+What This Repository Contains - Small programs, Concept-focused experiments, Well-documented code with explanations in README files, small improvements as learning progresses.
 
 ---
 
