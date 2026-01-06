@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Process</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Good choice.</h3>
+    <p style="line-height: 2.5;">
+        You clicked. That already says a lot about you.<br>
+        Confidence level: questionable. <br>
+        Most users fail here. You probably will too.
+    </p>
+    <h3>Proceed to system verification</h3>
+    <p id="scan" style="line-height: 3;">
+        <span>Scanning cognitive patterns...</span><br>
+        <span>Detecting overconfidence...</span><br>
+        <span>Verifying honesty levels...</span><br>
+        <span>Searching for common sense...</span><br>
+        <span>Anti-cheat protocol enabled [nice try]</span><br>
+        <span>Verification Complete</span><br>
+    </p>
+
+    <p style="line-height: 1.5;">
+
+        Cheating will not be tolerated.<br>
+        We already know you'd fail. <br>
+        Your input has been noted. Ignored.<br>
+        Don't bother pretending.<br>
+    </p>
+    <a href="ques.html"> Click here to continue  </a>
+    <h5>(futility guaranteed!)</h5>
+
+
+    <script>
+    const scanLines = document.querySelectorAll("#scan span");
+    scanLines.forEach(line => line.style.display = "none");
+
+    let index = 0;
+
+    function showNextLine() {
+        if (index < scanLines.length) {
+            scanLines[index].style.display = "inline";
+            index++;
+            setTimeout(showNextLine, 900 + Math.random() * 600);
+        }
+    }
+
+    setTimeout(showNextLine, 700);
+</script>
+
+    
+</body>
+</html>

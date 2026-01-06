@@ -1,0 +1,106 @@
+/* Brain Lag – intentional minimal chaos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+body {
+    background: #0e0e0e;
+    color: #e6e6e6;
+    min-height: 100vh;
+    padding: 60px;
+    line-height: 1.8;
+}
+
+/* headings */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+h4, h5 {
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* text */
+p {
+    max-width: 800px;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+/* links */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #9affff;
+    text-decoration: none;
+    border-bottom: 1px dashed #9affff;
+}
+
+a:hover {
+    color: #ff8c8c;
+    border-color: #ff8c8c;
+}
+
+/* buttons */
+button {
+    background: transparent;
+    color: #e6e6e6;
+    border: 1px solid #555;
+    padding: 14px 28px;
+    margin: 20px 15px 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #1a1a1a;
+    border-color: #fff;
+}
+
+/* response + progress */
+#response {
+    margin-top: 30px;
+    font-style: italic;
+    color: #ff8c8c;
+}
+
+#progress {
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+/* Vertical psychological progress bar */
+.progress-container {
+    position: fixed;
+    right: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 240px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, #ff3b3b, #ff9f9f);
+    transition: height 0.8s ease;
+}
