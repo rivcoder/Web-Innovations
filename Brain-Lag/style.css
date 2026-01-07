@@ -1,4 +1,4 @@
-/* Brain Lag – intentional minimal chaos */
+/* Brain Lag */
 
 * {
     margin: 0;
@@ -82,7 +82,7 @@ button:hover {
     opacity: 0.6;
 }
 
-/* Vertical psychological progress bar */
+/* Vertical progress bar */
 .progress-container {
     position: fixed;
     right: 18%;
@@ -104,6 +104,7 @@ button:hover {
     background: linear-gradient(to top, #ff3b3b, #ff9f9f);
     transition: height 0.8s ease;
 }
+
 
 
 
