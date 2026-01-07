@@ -85,7 +85,7 @@ button:hover {
 /* Vertical psychological progress bar */
 .progress-container {
     position: fixed;
-    right: 48%;
+    right: 68%;
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
@@ -104,4 +104,5 @@ button:hover {
     background: linear-gradient(to top, #ff3b3b, #ff9f9f);
     transition: height 0.8s ease;
 }
+
 
