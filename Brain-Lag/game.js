@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const barContainer = document.createElement("div");
     barContainer.className = "progress-container";
     barContainer.style.position = "fixed";
-    barContainer.style.left = 70%";
+    barContainer.style.left = "89%";
     barContainer.style.top = "20%";
     barContainer.style.transform = "translateX(-50%)";
     barContainer.style.width = "20px";
@@ -183,5 +183,3 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(loadQuestion, 1500);
 
 });
-
-
