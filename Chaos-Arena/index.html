@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaos Battle Arena</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Instructions Overlay -->
+<div id="instructionsOverlay">
+  <div id="instructionsBox">
+    <h2>📝 How to Play</h2>
+    <p>Click CHAOS to spawn a random card each turn.</p>
+    <ul>
+      <li>🟢 Weak → +1 point</li>
+      <li>🔵 Strong → +3 points + confetti</li>
+      <li>🔴 Villain → GAME OVER</li>
+      <li>Enemy card may reduce your points if stronger</li>
+    </ul>
+    <button id="startButton">START GAME</button>
+  </div>
+</div>
+
+<h1>⚔️ Chaos Battle Arena ⚔️</h1>
+
+<div id="gameContainer">
+
+  <div id="scoreBoard">
+    <div class="scoreCard" id="playerScore">PLAYER: 0</div>
+    <div class="scoreCard" id="enemyScore">ENEMY: 0</div>
+  </div>
+
+  <div class="cardContainer">
+    <div class="cardBox">
+      <img id="playerCard" src="" alt="Player Card">
+    </div>
+    <div class="cardBox">
+      <img id="enemyCard" src="" alt="Enemy Card">
+    </div>
+  </div>
+
+  <div id="buttonsContainer">
+    <button id="chaosButton" disabled>CHAOS!</button>
+    <button id="restartButton">RESTART</button>
+  </div>
+
+  <div id="gameOver">💀 GAME OVER 💀</div>
+  <div id="finalWinner"></div>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
