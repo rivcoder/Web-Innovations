@@ -34,10 +34,15 @@ JS – Assisted by AI + me (still learning JS 😭)
 Features
 
 Random card battle system
+
 Enemy score vs player score
+
 Confetti effects for strong cards
+
 Golden highlight for special cards
+
 Multiple character decks
+
 Competitive score ending
 
 Play it here
