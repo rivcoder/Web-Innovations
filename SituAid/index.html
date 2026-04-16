@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SituAid — Act Fast. Save Lives.</title>
+  <meta name="description" content="SituAid is an AI-powered, decision-based emergency guidance system. Answer questions, get instant step-by-step first-aid instructions for choking, bleeding, burns, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 1 — LANDING
+  ═══════════════════════════════════════ -->
+  <section id="screen-landing" class="screen active">
+    <div class="landing-bg">
+      <div class="pulse-ring ring-1"></div>
+      <div class="pulse-ring ring-2"></div>
+      <div class="pulse-ring ring-3"></div>
+    </div>
+    <div class="landing-content">
+      <div class="logo-wrap">
+        <div class="logo-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="18" width="40" height="12" rx="6" fill="white"/>
+            <rect x="18" y="4" width="12" height="40" rx="6" fill="white"/>
+          </svg>
+        </div>
+        <h1 class="logo-text">SituAid</h1>
+      </div>
+      <p class="tagline">Act fast. <span class="tagline-accent">Save lives.</span></p>
+      <p class="landing-sub">A decision-based emergency guidance system.<br/>Answer questions — get the right action, instantly.</p>
+      <button id="btn-start" class="btn-primary btn-landing" onclick="goToScenarioSelection()">
+        <span>Start Now</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div class="landing-badges">
+        <span class="badge">🫁 Choking</span>
+        <span class="badge">🩸 Bleeding</span>
+        <span class="badge">🔥 Burns</span>
+        <span class="badge">💤 Unconscious</span>
+      </div>
+    </div>
+    <div class="landing-wave"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 2 — SCENARIO SELECTION
+  ═══════════════════════════════════════ -->
+  <section id="screen-selection" class="screen">
+    <div class="screen-header">
+      <button class="btn-back" onclick="goTo('screen-landing')" aria-label="Back to home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <div class="screen-title-wrap">
+        <span class="screen-eyebrow">Emergency Scenarios</span>
+        <h2 class="screen-title">What's happening?</h2>
+      </div>
+    </div>
+
+    <div class="scenario-grid">
+      <button class="scenario-card" id="card-choking" onclick="loadScenario('choking')">
+        <div class="scenario-icon-wrap" style="--card-color: #FF6B6B; --card-glow: rgba(255,107,107,0.3)">
+          <span class="scenario-emoji">🫁</span>
+        </div>
+        <div class="scenario-info">
+          <h3>Choking</h3>
+          <p>Airway obstruction emergency</p>
+        </div>
+        <span class="scenario-urgency high">HIGH</span>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <button class="scenario-card" id="card-bleeding" onclick="loadScenario('bleeding')">
+        <div class="scenario-icon-wrap" style="--card-color: #FF4757; --card-glow: rgba(255,71,87,0.3)">
+          <span class="scenario-emoji">🩸</span>
+        </div>
+        <div class="scenario-info">
+          <h3>Severe Bleeding</h3>
+          <p>Wound & hemorrhage control</p>
+        </div>
+        <span class="scenario-urgency critical">CRITICAL</span>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <button class="scenario-card" id="card-burn" onclick="loadScenario('burn')">
+        <div class="scenario-icon-wrap" style="--card-color: #FF9F43; --card-glow: rgba(255,159,67,0.3)">
+          <span class="scenario-emoji">🔥</span>
+        </div>
+        <div class="scenario-info">
+          <h3>Burns</h3>
+          <p>Thermal & chemical burn care</p>
+        </div>
+        <span class="scenario-urgency medium">MODERATE</span>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <button class="scenario-card" id="card-unconscious" onclick="loadScenario('unconscious')">
+        <div class="scenario-icon-wrap" style="--card-color: #A29BFE; --card-glow: rgba(162,155,254,0.3)">
+          <span class="scenario-emoji">💤</span>
+        </div>
+        <div class="scenario-info">
+          <h3>Unconscious Person</h3>
+          <p>Unresponsive & breathing check</p>
+        </div>
+        <span class="scenario-urgency critical">CRITICAL</span>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 3 — SCENARIO START
+  ═══════════════════════════════════════ -->
+  <section id="screen-start" class="screen">
+    <div class="screen-header">
+      <button class="btn-back" onclick="goTo('screen-selection')" aria-label="Back to scenarios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+    </div>
+
+    <div class="start-content">
+      <div id="start-icon" class="start-icon-wrap"></div>
+      <div id="start-urgency-badge" class="start-urgency-badge"></div>
+      <h2 id="start-title" class="start-title"></h2>
+      <p id="start-description" class="start-description"></p>
+
+      <div class="start-tips">
+        <div class="tip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <span>Stay calm — panic slows you down</span>
+        </div>
+        <div class="tip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.83 19.79 19.79 0 01.01 8.23a2 2 0 012-2.18 2 2 0 011.72 1 15.26 15.26 0 00.83 2 2 2 0 01-.45 2.11L3.09 12a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45 15.26 15.26 0 002 .83 2 2 0 011 1.72z"/></svg>
+          <span>Call emergency services if critical</span>
+        </div>
+        <div class="tip-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Follow each step carefully</span>
+        </div>
+      </div>
+
+      <button id="btn-simulate" class="btn-primary btn-simulate" onclick="startSimulation()">
+        <span>Start Simulation</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 4 — SIMULATION ENGINE
+  ═══════════════════════════════════════ -->
+  <section id="screen-simulation" class="screen">
+    <div class="sim-header">
+      <div class="sim-header-top">
+        <button class="btn-back" id="sim-back-btn" onclick="goTo('screen-start')" aria-label="Exit simulation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="sim-scenario-label" id="sim-scenario-label"></div>
+      </div>
+      <div class="sim-progress-wrap">
+        <div class="sim-progress-bar">
+          <div class="sim-progress-fill" id="sim-progress-fill"></div>
+        </div>
+        <span class="sim-progress-text" id="sim-progress-text">Step 1</span>
+      </div>
+    </div>
+
+    <!-- Timer (optional urgency) -->
+    <div class="sim-timer-wrap" id="sim-timer-wrap">
+      <div class="timer-ring">
+        <svg viewBox="0 0 60 60" class="timer-svg">
+          <circle class="timer-track" cx="30" cy="30" r="26"/>
+          <circle class="timer-fill" id="timer-circle" cx="30" cy="30" r="26"/>
+        </svg>
+        <span class="timer-count" id="timer-count">15</span>
+      </div>
+      <span class="timer-label">seconds</span>
+    </div>
+
+    <div class="sim-body" id="sim-body">
+      <!-- Node content injected here -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SCREEN 5 — COMPLETION SUMMARY
+  ═══════════════════════════════════════ -->
+  <section id="screen-summary" class="screen">
+    <div class="summary-content">
+      <div class="summary-icon-wrap" id="summary-icon"></div>
+      <div class="summary-outcome-badge" id="summary-outcome-badge"></div>
+      <h2 class="summary-title" id="summary-title"></h2>
+      <p class="summary-subtitle" id="summary-subtitle"></p>
+
+      <div class="summary-takeaway" id="summary-takeaway">
+        <h3>Key Takeaway</h3>
+        <p id="summary-takeaway-text"></p>
+      </div>
+
+      <div class="summary-path" id="summary-path">
+        <h3>Your Decision Path</h3>
+        <div class="path-steps" id="path-steps"></div>
+      </div>
+
+      <div class="summary-actions">
+        <button class="btn-secondary" onclick="retryScenario()" id="btn-retry">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+          Retry Scenario
+        </button>
+        <button class="btn-primary" onclick="goTo('screen-selection')" id="btn-try-another">
+          Try Another
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
