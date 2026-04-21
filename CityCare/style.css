@@ -1,0 +1,315 @@
+/* ================= GLOBAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    background: linear-gradient(135deg, #0b1220, #0f172a 50%, #0b1220);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1100px;
+    margin: 100px auto 60px auto;
+    padding: 0 60px;
+}
+
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    background: linear-gradient(90deg, #ffffff, #c4b5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.primary {
+    background: linear-gradient(90deg, #7c3aed, #9333ea);
+    border-radius: 16px;
+    padding: 14px 32px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(124,58,237,0.4);
+}
+
+.primary:active {
+    transform: scale(0.97);
+}
+
+.tabs {
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding: 0 60px;
+    display: flex;
+    gap: 30px;
+}
+
+.tabs button {
+    background: transparent;
+    border: none;
+    padding: 14px 26px;
+    font-weight: 600;
+    color: #94a3b8;
+    font-size: 15px;
+    position: relative;
+}
+
+.tabs button:hover {
+    color: white;
+}
+
+.tabs button.active {
+    color: white;
+}
+
+.tabs button.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #7c3aed;
+    border-radius: 2px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* ================= FORM ELEMENTS ================= */
+
+input,
+textarea,
+select {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 14px;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    outline: none;
+    transition: all 0.25s ease;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* ================= LOCATION ROW ================= */
+
+.locationRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.locationRow button {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0 20px;
+    color: white;
+}
+
+.locationRow button:hover {
+    background: rgba(124,58,237,0.25);
+    border: 1px solid #7c3aed;
+}
+
+/* ================= UPLOAD AREA ================= */
+
+.upload {
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 15px;
+    transition: all 0.25s ease;
+}
+
+.upload:hover {
+    border-color: #7c3aed;
+    background: rgba(124,58,237,0.08);
+}
+
+/* ================= HISTORY ================= */
+
+#history {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#history h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.legend {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    max-height: 420px;      /* controls visible height */
+    overflow-y: auto;       /* enables vertical scrolling */
+    padding-right: 8px;     /* space for scrollbar */
+}
+
+/* Custom Scrollbar */
+
+#historyList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#historyList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#historyList::-webkit-scrollbar-thumb {
+    background: rgba(124,58,237,0.6);
+    border-radius: 10px;
+}
+
+#historyList::-webkit-scrollbar-thumb:hover {
+    background: rgba(124,58,237,0.9);
+}
+
+#historyList li {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 22px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+#historyList li:hover {
+    background: rgba(124,58,237,0.1);
+}
+
+/* Authority buttons inside list */
+#historyList button {
+    margin-left: 10px;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: white;
+}
+
+#historyList button:hover {
+    background: #7c3aed;
+}
+
+/* ================= HELP ================= */
+
+#help {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ================= ROLE DIALOG ================= */
+
+.dialog {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0b1220, #0f172a);
+    text-align: center;
+}
+
+.dialog h1 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.dialog p {
+    color: #94a3b8;
+}
+
+.dialog button {
+    margin-top: 20px;
+    width: 260px;
+    padding: 16px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+}
+
+.dialog button:hover {
+    background: rgba(124,58,237,0.25);
+    border: 1px solid #7c3aed;
+}
