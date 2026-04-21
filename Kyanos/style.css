@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+}
+#app { display: flex; height: 100vh; }
+#sidebar {
+    width: 220px;
+    background: #111827;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#sidebar h2 { margin-bottom: 20px; color: #e8e115; }
+#sidebar button {
+    margin: 5px 0;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+#sidebar button:hover { color: #7c7cff; }
+#main { flex: 1; padding: 20px; display: flex; flex-direction: column; }
+.tab.hidden { display: none; }
+#chat-window { flex: 1; overflow-y: auto; background: #111827; padding: 10px; border-radius: 10px; margin-bottom: 10px; }
+input, button { border-radius: 10px; padding: 10px; border: none; margin: 5px 0; }
+input { width: calc(100% - 22px); background: #111827; color: #e5e7eb; }
+button { background: #1f2937; color: #e5e7eb; cursor: pointer; }
+button:hover { background: #374151; }
