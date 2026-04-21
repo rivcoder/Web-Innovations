@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyanos 2.0</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <div id="sidebar">
+        <h2>Kyanos</h2>
+        <button onclick="switchTab('chat')">Chat</button>
+        <button onclick="switchTab('notes')">Notes</button>
+        <button onclick="switchTab('quiz')">Quiz</button>
+        <button onclick="switchTab('flashcards')">Flashcards</button>
+    </div>
+    <div id="main">
+        <div id="chat" class="tab">
+            <div id="chat-window"></div>
+            <input type="text" id="chat-input" placeholder="Message Kyanos..." />
+            <button onclick="sendChat()">Send</button>
+        </div>
+        <div id="notes" class="tab hidden">
+            <input type="text" id="notes-topic" placeholder="Enter topic"/>
+            <button onclick="generateNotes()">Generate Notes</button>
+            <div id="notes-output"></div>
+        </div>
+        <div id="quiz" class="tab hidden">
+            <input type="text" id="quiz-topic" placeholder="Enter topic"/>
+            <button onclick="generateQuiz()">Generate Quiz</button>
+            <div id="quiz-output"></div>
+        </div>
+        <div id="flashcards" class="tab hidden">
+            <input type="text" id="flash-topic" placeholder="Enter topic"/>
+            <button onclick="generateFlash()">Generate Flashcards</button>
+            <div id="flash-output"></div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
