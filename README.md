@@ -1,16 +1,12 @@
-# Learning-Lab
+## 🌐 Web Innovations
 
-Learning-Lab is a personal repository created to document and showcase my learning journey through small, focused programs and experiments.
-Each project in this repository represents a concept I practiced while learning fundamentals, logic building, and problem-solving.
+A collection of web app prototypes built to move fast, try ideas, and see what actually works (or breaks). Most of these are MVPs from quick builds or hackathon-style sprints—focused more on exploring concepts than polishing every edge.
 
-Disclaimer ⚠️- This repository is meant for learning purposes only.
----
-What This Repository Contains - Small programs, Concept-focused experiments, Well-documented code with explanations in README files, small improvements as learning progresses.
+Each build emphasizes:
 
-Current Status: Learning-Lab is an ongoing repository and will continue to evolve as I learn new concepts and improve existing implementations.
+* Fast execution and iteration (speed > perfection)
+* Clean and intuitive user interfaces (at least I try)
+* Interactive and engaging user experiences
+* Practical application of frontend concepts
 
----
-
-
-
-
+> These are intentionally prototypes—built to experiment, learn, and ship ideas quickly before overthinking them into oblivion.
