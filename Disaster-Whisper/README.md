@@ -9,11 +9,17 @@ It’s built as a **data-driven awareness tool**, not an official disaster warni
 ## 🚀 Features
 
 🌦️ Live environmental data (temperature, humidity, wind, etc.)
+
 🧠 ML-based risk estimation (Random Forest model)
+
 ⚖️ Hybrid system (ML predictions + rule-based corrections)
+
 📊 Risk Index (%) with simple interpretation
+
 📍 City-based search
+
 ⏱️ Real-time updates
+
 🌐 Web interface (lightweight, responsive)
 
 ---
@@ -21,9 +27,13 @@ It’s built as a **data-driven awareness tool**, not an official disaster warni
 ## 🛠️ Tech Stack
 
 **Backend:** Python (Flask)
+
 **Machine Learning:** Scikit-learn
+
 **Data Processing:** Pandas, NumPy
+
 **Frontend:** HTML, CSS, JavaScript
+
 **API:** Open-Meteo (no API key required)
 
 ---
