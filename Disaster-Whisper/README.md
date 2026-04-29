@@ -2,7 +2,6 @@
 
 **Disaster Whisper** is a web-based prototype that estimates environmental risk levels for a given city using real-time weather data and a lightweight machine learning model.
 
-It’s built as a **data-driven awareness tool**, not an official disaster warning system.
 
 ---
 
