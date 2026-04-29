@@ -1,172 +1,109 @@
 # Disaster-Whisper
 
-Disaster Whisper is a Python-based application that estimates environmental risk levels for a given city using real-time weather and air quality data.
-It is designed as a data-driven awareness tool, not an official disaster warning system.
+**Disaster Whisper** is a web-based prototype that estimates environmental risk levels for a given city using real-time weather data and a lightweight machine learning model.
 
-This project demonstrates API integration, data processing, UI development, and responsible use of AI-assisted development.
-
+It’s built as a **data-driven awareness tool**, not an official disaster warning system.
 
 ---
 
-🚀 Features
+## 🚀 Features
 
-🌦️ Real-time weather data (temperature, humidity, wind speed, rainfall)
-
-🌫️ Air Quality Index (AQI) display
-
-📊 Estimated Risk Index (%) based on environmental parameters
-
-📍 City-based lookup
-
-⏱️ Timestamped updates
-
-🖥️ Simple and readable UI
-
-
+🌦️ Live environmental data (temperature, humidity, wind, etc.)
+🧠 ML-based risk estimation (Random Forest model)
+⚖️ Hybrid system (ML predictions + rule-based corrections)
+📊 Risk Index (%) with simple interpretation
+📍 City-based search
+⏱️ Real-time updates
+🌐 Web interface (lightweight, responsive)
 
 ---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Language: Python
-
-UI Framework: Desktop GUI (Python-based)
-
-APIs: Weather & Air Quality APIs
-
-Data Handling: JSON, datetime
-
-AI Assistance: Used during development (see disclosure below)
-
-
+**Backend:** Python (Flask)
+**Machine Learning:** Scikit-learn
+**Data Processing:** Pandas, NumPy
+**Frontend:** HTML, CSS, JavaScript
+**API:** Open-Meteo (no API key required)
 
 ---
 
-🧠 How It Works
+## 🧠 How It Works
 
-1. User enters a city name
+* User enters a city in the web interface
 
+* Backend fetches live environmental data
 
-2. The app fetches live environmental data via APIs
+* Key parameters extracted:
 
+  * Temperature
+  * Humidity
+  * Wind speed
+  * AQI
 
-3. Key parameters are extracted:
+* Data flows through:
 
-Temperature
+  * Trained ML model (`model.pkl`)
+  * Rule-based validation layer
 
-Humidity
+* Output displayed on UI:
 
-Wind speed
-
-Rainfall
-
-Air Quality Index (AQI)
-
-
-
-4. A custom heuristic model processes these values
-
-
-5. The application displays:
-
-Estimated Risk Index (%)
-
-Qualitative status message
-
-Raw environmental data for transparency
-
-
+  * Risk Index (%)
+  * Status message
+  * Raw environmental data
 
 ---
 
-📊 Risk Index Explanation
+## 📊 Risk Index Explanation
 
 The Risk Index is:
 
-A model-based estimate
-
-Derived from weighted environmental parameters
-
-Intended for educational and demonstrative purposes
-
-
-It is not an official disaster or safety rating.
-
+* A **model-based estimate**
+* Based on environmental conditions
+* Adjusted using simple rule logic for stability
 
 ---
 
-🤖 AI Usage Disclosure (Important)
+## ⚠️ Project Status
 
-AI tools were used during development to:
-
-Assist with logic clarification and problem-solving
-
-Help generate explanations and documentation
-
-Speed up learning and development workflows
-
-
-All core decisions, including:
-
-Risk estimation logic
-
-API selection and integration
-
-UI design
-
-Data handling and presentation
-
-were implemented intentionally to demonstrate understanding, not blind dependency.
-
+* **Prototype (early-stage)**
+* No production-level dataset yet
+* No API key dependencies (kept simple intentionally)
+* Focus: system design + ML integration + real-time flow
 
 ---
 
-⚠️ Disclaimer
+## 🤖 AI Usage Disclosure
 
-> Disaster Whisper provides estimated insights based on available environmental data.
-It should not be used as a substitute for official disaster alerts, emergency services, or government advisories.
+AI tools were used to:
 
+* Assist in development and debugging
+* Improve structure and documentation
 
----
+Core implementation decisions like:
 
-📌 Use Cases
+* Architecture
+* Risk logic
+* Data handling
+* UI flow
 
-Learning API integration
-
-Demonstrating risk modeling concepts
-
-Environmental data visualization
-
-Python portfolio project
-
-
+were built intentionally to demonstrate understanding.
 
 ---
 
-📈 Future Improvements
+## 📌 Use Cases
 
-Improved risk modeling
-
-AQI-based health warnings
-
-Historical data trends
-
-Multi-city comparison
-
-Packaging as a desktop executable
-
-
+* Learning Flask + APIs
+* Understanding ML integration in web apps
+* Environmental data visualization
 
 ---
 
-👤 Author
+## 📈 Future Improvements
 
-Rashika (Riv)
-Python • APIs • Data-driven Applications
+* Better training data → improved accuracy
+* Pattern-based risk detection
+* Multi-parameter expansion (AQI, rainfall intensity, etc.)
+* UI/UX refinement
+* Deployment (public access)
 
-
----
-
-⭐ Acknowledgements
-
-Built using publicly available environmental data APIs and AI-assisted development tools.
