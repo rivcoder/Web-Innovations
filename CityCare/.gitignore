@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv
+venv/
+ENV/
+env/
+.env
+
+# Database
+instance/
+*.db
+
+# Static uploads (User uploaded images)
+static/uploads/*
+!static/uploads/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store

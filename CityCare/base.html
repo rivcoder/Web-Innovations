@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare | Premium Civic Resolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">CityCare<span class="dot">.</span></div>
+        <div class="nav-links">
+            {% if current_user.is_authenticated %}
+                <span class="user-greeting">Welcome, {{ current_user.username }}</span>
+                <a href="{{ url_for('auth_logout') }}" class="btn-outline">Logout</a>
+            {% else %}
+                <a href="{{ url_for('auth_login') }}" class="btn-text">Log In</a>
+                <a href="{{ url_for('auth_register') }}" class="btn-primary">Register</a>
+            {% endif %}
+        </div>
+    </nav>
+    
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flashes">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script>
+        const CURRENT_USER_ROLE = "{{ current_user.role if current_user.is_authenticated else '' }}";
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

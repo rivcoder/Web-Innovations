@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card glass-panel">
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to continue to CityCare.</p>
+        
+        <form method="POST" action="{{ url_for('auth_login') }}" class="auth-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            
+            <button type="submit" class="btn-primary w-100 mt-4">Log In</button>
+        </form>
+        
+        <p class="auth-footer">
+            Don't have an account? <a href="{{ url_for('auth_register') }}">Register here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

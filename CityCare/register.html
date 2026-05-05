@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card glass-panel">
+        <h1 class="auth-title">Create Account</h1>
+        <p class="auth-subtitle">Join CityCare to report and track civic issues.</p>
+        
+        <form method="POST" action="{{ url_for('auth_register') }}" class="auth-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Choose a username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Create a password">
+            </div>
+            
+            <button type="submit" class="btn-primary w-100 mt-4">Register</button>
+        </form>
+        
+        <p class="auth-footer">
+            Already have an account? <a href="{{ url_for('auth_login') }}">Log in here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
