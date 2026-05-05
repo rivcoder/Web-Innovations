@@ -63,21 +63,17 @@ Instead of passive complaints, CityCare transforms civic responsibility into an 
 
 ## Tech-Stack
 
-| Component          | Technology                                    |
+• Backend: Python (Flask) 
 
-| :----------------- | :-------------------------------------------- |
+• Database: SQL (SQLAlchemy ORM)  
 
-| **Backend**        | Python (Flask)                                |
+• Authentication: Flask-Login  
 
-| **Database**       | SQL (SQLAlchemy ORM)                          |
+• Security: Flask-Bcrypt  
 
-| **Authentication** | Flask-Login                                   |
+• Frontend: HTML5, CSS3, Vanilla JavaScript (Fetch API)  
 
-| **Security**       | Flask-Bcrypt                                  |
-
-| **Frontend**       | HTML5, CSS3, Vanilla JavaScript (Fetch API)   |
-
-| **Styling**        | Modern UI (Glassmorphism + Responsive Design) |
+• Styling: Modern UI (Glassmorphism + Responsive Design) 
 
 
 ## 🧠 System Architecture
@@ -102,7 +98,7 @@ Instead of passive complaints, CityCare transforms civic responsibility into an 
 
 5. Resolution Flow
 
-•Authorities update report status
+• Authorities update report status
 
 6. Gamification Trigger
 
@@ -139,6 +135,6 @@ This project reflects applied understanding of full-stack engineering.
  
 - Social sharing for resolved reports
  
- Analytics dashboard (heatmaps, trends)
+- Analytics dashboard (heatmaps, trends)
  
- Role-based admin system (multi-authority support)
+-  Role-based admin system (multi-authority support)
