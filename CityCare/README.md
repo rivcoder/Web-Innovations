@@ -61,7 +61,7 @@ Instead of passive complaints, CityCare transforms civic responsibility into an 
 
 • Closing a report updates user credibility and engagement scores
 
-## Tech-Stack
+## 🛠️ Tech-Stack
 
 • Backend: Python (Flask) 
 
