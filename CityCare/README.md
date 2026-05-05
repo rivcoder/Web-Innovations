@@ -44,7 +44,7 @@ Instead of passive complaints, CityCare transforms civic responsibility into an 
 • Collaborate via comments on specific reports
 
 
-### For Authorities
+### 🛡️ For Authorities
 
 
 #### Centralized Dashboard
